@@ -30,10 +30,14 @@
     <title>NDC Lottery</title>
   </head>
 
-  <body class="bg-dark text-light">
+  <body
+    class="text-light"
+    style="background: #000308 url(bg.jpg) center/cover no-repeat"
+  >
     <div id="welcome-scr">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="title h1 m-5">NDC Lottery</div>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center vh-100"
+      >
         <textarea
           id="player-list"
           value="hansen"
@@ -44,20 +48,21 @@
         <button
           id="submit-btn"
           autofocus
-          class="btn btn-lg btn-info font-weight-bold"
+          class="btn btn-lg btn-danger font-weight-bold mb-4"
         >
           SUBMIT
         </button>
-        <button id="demo-btn" class="btn btn-link text-white">
-          demo_json()
+        <button id="demo-btn" class="btn btn-lg btn-info font-weight-bold">
+          FETCH API
         </button>
       </div>
     </div>
 
     <div id="main-scr">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="title h1 m-5">NDC Lottery</div>
-        <div class="wheel-wrapper h2 mb-3">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center vh-100"
+      >
+        <!-- <div class="wheel-wrapper h2 mb-3">
           <div class="wheel-shadow"></div>
           <div class="wheel-border">
             <div class="arrow left">&blacktriangleright;</div>
@@ -70,7 +75,19 @@
           </div>
         </div>
         <button id="winner-btn" class="btn btn-lg btn-primary"></button>
-        <button id="reset-btn" class="btn btn-lg btn-danger"></button>
+        <button id="reset-btn" class="btn btn-lg btn-danger"></button> -->
+        <div class="w-100" style="padding: 0 15rem">
+          <div class="bg-danger p-2 text-center">
+            <h1 id="player-name" class="display-4">CLICK ROLL<br />TO START</h1>
+            <!-- <h1 id="player-name" class="display-4">JOHN DOE - 0000000000</h1> -->
+          </div>
+          <button
+            id="roll-btn"
+            class="bg-dark p-2 btn text-white mt-2 w-100 rounded-0"
+          >
+            ROLL
+          </button>
+        </div>
       </div>
     </div>
 

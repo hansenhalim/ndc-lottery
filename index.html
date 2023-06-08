@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@800&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+
+    <title>NDC Lottery</title>
+  </head>
+
+  <body class="bg-dark text-light">
+    <div id="welcome-scr">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="title h1 m-5">NDC Lottery</div>
+        <textarea
+          id="player-list"
+          value="hansen"
+          cols="35"
+          rows="15"
+          class="mb-4"
+        ></textarea>
+        <button
+          id="submit-btn"
+          autofocus
+          class="btn btn-lg btn-info font-weight-bold"
+        >
+          SUBMIT
+        </button>
+        <button id="demo-btn" class="btn btn-link text-white">
+          demo_json()
+        </button>
+      </div>
+    </div>
+
+    <div id="main-scr">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="title h1 m-5">NDC Lottery</div>
+        <div class="wheel-wrapper h2 mb-3">
+          <div class="wheel-shadow"></div>
+          <div class="wheel-border">
+            <div class="arrow left">&blacktriangleright;</div>
+            <div class="arrow right">&blacktriangleleft;</div>
+          </div>
+          <div class="wheel-container">
+            <ul id="wheel-1" class="wheel list-group">
+              <li class="list-group-item">' + player + '</li>
+            </ul>
+          </div>
+        </div>
+        <button id="winner-btn" class="btn btn-lg btn-primary"></button>
+        <button id="reset-btn" class="btn btn-lg btn-danger"></button>
+      </div>
+    </div>
+
+    <script src="confetti.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

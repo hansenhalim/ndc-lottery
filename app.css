@@ -1,0 +1,107 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+}
+
+.list-group-item {
+  padding-left: 80px;
+  padding-right: 80px;
+  border: 0;
+}
+
+.wheel-wrapper {
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+@keyframes idling {
+  0% {
+    margin-top: calc(-62px * 0);
+  }
+  100% {
+    margin-top: calc(-62px * 100);
+  }
+}
+
+@keyframes winning {
+  0% {
+    margin-top: calc(-62px * 0);
+  }
+  100% {
+    margin-top: calc(-62px * 100);
+  }
+}
+
+.wheel {
+  animation: idling 120s infinite;
+  border-radius: 0;
+  animation-timing-function: linear;
+  white-space: nowrap;
+}
+
+.wheel.winning {
+  animation: winning 7s;
+  animation-timing-function: cubic-bezier(0, 0.55, 0.44, 1.04);
+}
+
+.wheel-shadow {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(white, transparent, white);
+}
+
+.wheel-border {
+  z-index: 1;
+  width: 100%;
+  height: 62px;
+  margin-top: calc(62px * 2);
+  outline: 10px solid rgb(255, 0, 0);
+  position: absolute;
+}
+
+.wheel-container {
+  overflow-y: hidden;
+  height: calc(62px * 5);
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+}
+
+#winner-btn::before {
+  content: "Pick A Winner";
+}
+
+#winner-btn.winning::before {
+  content: "Drum Roll, Please";
+}
+
+#reset-btn::before {
+  content: "Pick Another One";
+}
+
+.arrow {
+  position: absolute;
+  top: 16px;
+  color: red;
+  line-height: 0;
+  font-size: 7.5rem;
+}
+
+.arrow.left {
+  left: -1px;
+}
+
+.arrow.right {
+  right: -1px;
+}
